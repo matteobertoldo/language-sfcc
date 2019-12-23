@@ -15,6 +15,7 @@ addons:
       - libsecret-1-dev
 
 before_script:
+  - npm install
   - npm run parse
 
 script:
