@@ -1,0 +1,189 @@
+{
+  "scopeName": "text.html.isml",
+  "name": "ISML",
+  "fileTypes": ["isml"],
+  "injections": {
+    "L:text.html.isml - (meta.tag.template.isml | comment)": {
+      "patterns": [
+        {
+          "include": "#comment"
+        },
+        {
+          "include": "#expression"
+        },
+        {
+          "include": "#tags"
+        }
+      ]
+    }
+  },
+  "patterns": [
+    {
+      "include": "text.html.basic"
+    }
+  ],
+  "repository": {
+    "comment": {
+      "begin": "<iscomment>",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.comment.isml"
+        }
+      },
+      "end": "</iscomment>",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.comment.isml"
+        }
+      },
+      "name": "comment.block.isml"
+    },
+    "expression": {
+      "begin": "\\$\\{",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.section.embedded.begin.isml"
+        }
+      },
+      "contentName": "source.js.ds",
+      "end": "(\\})",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.section.embedded.end.isml"
+        },
+        "1": {
+          "name": "source.js.ds"
+        }
+      },
+      "name": "meta.embedded.line.expression.isml",
+      "patterns": [
+        {
+          "include": "source.js.ds"
+        }
+      ]
+    },
+    "tags": {
+      "patterns": [
+        {
+          "begin": "(<)((?i)isscript)(>)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.html.isml"
+            },
+            "2": {
+              "name": "punctuation.section.embedded.begin.html.isml"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.html.isml"
+            }
+          },
+          "end": "(</)((?i)isscript)(>)",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.html.isml"
+            },
+            "2": {
+              "name": "punctuation.section.embedded.end.html.isml"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.html.isml"
+            }
+          },
+          "name": "meta.tag.isscript.isml",
+          "patterns": [
+            {
+              "begin": "(?i)\\G(<)(isscript)",
+              "beginCaptures": {
+                "1": {
+                  "name": "punctuation.definition.tag.html.isml"
+                },
+                "2": {
+                  "name": "entity.name.tag.isscript.isml"
+                }
+              },
+              "end": ">",
+              "endCaptures": {
+                "0": {
+                  "name": "punctuation.definition.tag.html.isml"
+                }
+              }
+            },
+            {
+              "begin": "(?!\\G)",
+              "end": "(?i)(?=</isscript>)",
+              "name": "source.js.ds.embedded.isml",
+              "patterns": [
+                {
+                  "include": "source.js.ds"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "begin": "(<)((?i)isactivedatahead)(/)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.html.isml"
+            },
+            "2": {
+              "name": "punctuation.section.embedded.isml"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.html.isml"
+            }
+          },
+          "end": ">",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.tag.isml"
+            }
+          },
+          "name": "meta.tag.isactivedatahead.isml"
+        },
+        {
+          "begin": "(<)((?i)isanalyticsoff)(/)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.html.isml"
+            },
+            "2": {
+              "name": "punctuation.section.embedded.isml"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.html.isml"
+            }
+          },
+          "end": ">",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.tag.isml"
+            }
+          },
+          "name": "meta.tag.isanalyticsoff.isml"
+        },
+        {
+          "begin": "(<)((?i)isreplace)(/)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.html.isml"
+            },
+            "2": {
+              "name": "punctuation.section.embedded.isml"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.html.isml"
+            }
+          },
+          "end": ">",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.tag.isml"
+            }
+          },
+          "name": "meta.tag.isreplace.isml"
+        }
+      ]
+    }
+  }
+}
