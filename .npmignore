@@ -1,0 +1,8 @@
+.DS_Store
+.gitignore
+.git/
+.github/
+assets/
+node_modules/
+spec/visual/
+npm-debug.log

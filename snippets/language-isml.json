@@ -1,0 +1,218 @@
+{
+  ".text.html.isml": {
+    "Active Data Context": {
+      "prefix": "activedatacontext",
+      "body": "<isactivedatacontext category=\"${$1current_category}\"/>$0",
+      "description": "Can be placed anywhere that script tags are valid.\n\nShould only be in one template used to render a page."
+    },
+    "Active Data Head": {
+      "prefix": "activedatahead",
+      "body": "<isactivedatahead/>$0",
+      "description": "Allows collection of active data from pages with a <head> tag."
+    },
+    "Analytics Off": {
+      "prefix": "analyticsoff",
+      "body": "<isanalyticsoff/>$0",
+      "description": "Disables analytics for single pages.\n\nCan be placed anywhere that script tags are valid."
+    },
+    "Break": {
+      "prefix": "break",
+      "body": "<isbreak/>$0",
+      "description": "Only used inside <isloop>...</isloop>."
+    },
+    "Cache": {
+      "prefix": "cache",
+      "body": "<iscache status=\"$1off|on\" type=\"relative|daily\" hour=\"duration_hr\" minute=\"duration_min\" varyby=\"price_promotion\"/>$0",
+      "description": "Can be placed anywhere in the template.\nHowever, as a best practice, Commerce Cloud recommends that caching statements are placed at the beginning of a template.\n\nIf the tag occurs several times in one template, the one set to cache off or the one with the shortest cache time is used as the cache setting for the resulting page."
+    },
+    "Comment": {
+      "prefix": "comment",
+      "body": "<iscomment> $1 </iscomment>$0",
+      "description": "Can be placed anywhere in the template.\nUsing <iscomment> is preferable to using HTML comments, especially for sensitive information, because the tag is removed automatically by B2C Commerce on rendered pages."
+    },
+    "Component": {
+      "prefix": "component",
+      "body": "<iscomponent pipeline=\"$1pipeline_name\" locale=\"locale_name\" parameterN=\"${valueN}\"/>$0",
+      "description": "Including the output of a pipeline in the page."
+    },
+    "Content": {
+      "prefix": "content",
+      "body": "<iscontent type=\"$1MIME_type\" charset=\"char_set\" encoding=\"on|off|html|xml|wml\" compact=\"true|false\"/>$0",
+      "description": "Define the MIME type of the output document.\nLocation: Before the HTML DOCTYPE declaration.\n\nTo make sure all characters in a document are correctly encoded, the <iscontent/> tag should always be first in an ISML template.\n\nDon't specify <iscontent> if it isn't needed. The default for pipeline responses text/html, UTF-8, and compact=\"false\".\n\nThe default for emails when using the SendMail pipelet is text/plain."
+    },
+    "Continue": {
+      "prefix": "continue",
+      "body": "<iscontinue/>$0",
+      "description": "Jump to the beginning of the loop.\n\nOnly used inside <isloop>...</isloop>."
+    },
+    "Decorate": {
+      "prefix": "decorate",
+      "body": "<isdecorate template=\"$1template_name\">\n</isdecorate>$0",
+      "description": "Template decoration mechanism.\nMust wrap all content to be decorated.\n\nFor <isdecorate> to render a page, the content it wraps must contain an <isreplace/> tag."
+    },
+    "Else Condition": {
+      "prefix": "else",
+      "body": "<iselse>$0",
+      "description": "Specifying what happens if a condition doesn't evaluate to true.\n\nCan be placed anywhere in the template."
+    },
+    "Else If Condition": {
+      "prefix": "elseif",
+      "body": "<iselseif condition=\"${$1true}\">\n</iselseif>$0",
+      "description": "Creating conditional template code.\n\nCan be placed anywhere in the template."
+    },
+    "If Condition": {
+      "prefix": "if",
+      "body": "<isif condition=\"${$1true}\">\n</isif>$0",
+      "description": "Creating conditional template code.\n\nCan be placed anywhere in the template."
+    },
+    "Ife Condition": {
+      "prefix": "ife",
+      "body": "<isif condition=\"${$1true}\">\n\n<iselse>\n\n</isif>$0",
+      "description": "Creating conditional template code.\n\nCan be placed anywhere in the template."
+    },
+    "Include": {
+      "prefix": "include",
+      "body": "<isinclude template=\"$1template_name\"/>$0",
+      "description": "Including the contents of one template inside another.\nCan be placed anywhere in the template.\n\nHowever, as a best practice, add includes that affect the whole page to the top of the template."
+    },
+    "Loop": {
+      "prefix": "loop",
+      "body": "<isloop items=\"${$1item_object}\" var=\"var_name\" status=\"var_name\" begin=\"${expression}\" end=\"${expression}\" step=\"${expression}\">\n</isloop>",
+      "description": "Creating loops.\n\nCan be placed anywhere in the template."
+    },
+    "Module": {
+      "prefix": "module",
+      "body": "<ismodule template=\"$1template_path\" name=\"tag_name\" attribute=\"attr_name\"/>$0",
+      "description": "Declaring custom tags.\n\nCan be placed anywhere in the template.\n\nIn SiteGenesis, all <ismodules> are declared in one file: util/modules.isml."
+    },
+    "Next": {
+      "prefix": "next",
+      "body": "<isnext/>$0",
+      "description": "Jumping forward within a loop.\n\nCan be placed anywhere in the template.\n\nOnly used inside <isloop>...</isloop>."
+    },
+    "Object ISML": {
+      "prefix": "object-isml",
+      "body": "<isobject object=\"${$1name}\" view=\"none|searchhit|recommendation|setproduct|detail\">\n\n</isobject>$0",
+      "description": "Collects page impressions or views from the storefront.\n\nMust wrap any object you want to record active data for."
+    },
+    "Print": {
+      "prefix": "print",
+      "body": "<isprint value=\"${$1}\" encoding=\"on|off\" timezone=\"SITE|INSTANCE|utc\" padding=\"padding_constant\"/>$0",
+      "description": "Formatting and encoding output strings."
+    },
+    "Redirect": {
+      "prefix": "redirect",
+      "body": "<isredirect location=\"${$1target_url}\" permanent=\"true|false\"/>",
+      "description": "Redirecting browsers to specific URLs.\n\nLocation: Before the HTML DOCTYPE declaration."
+    },
+    "Remove": {
+      "prefix": "remove",
+      "body": "<isremove name=\"$1var_name\" scope=\"session|pdict|request|page\"/>",
+      "description": "Removing user-defined variables.\n\nCan be placed anywhere in the template."
+    },
+    "Replace": {
+      "prefix": "replace",
+      "body": "<isreplace/>$0",
+      "description": "Part of the decorator mechanism; insert content to be decorated.\n\nMust be within <isdecorate> tags. If a template is going to be remotely included, the <isdecorate> tags can be in the including template."
+    },
+    "Script ISML": {
+      "prefix": "script-isml",
+      "body": "<isscript>$1\n\n</isscript>$0",
+      "description": "Creating scripts within templates.\n\nCan be placed anywhere that script tags are valid."
+    },
+    "Select ISML": {
+      "prefix": "select-isml",
+      "body": "<isselect name=\"$1simple_name\" iterator=\"${loop_var}\" description=\"description\" value=\"text_value\" condition=\"true|false\" encoding=\"on|off\"/>$0",
+      "description": "Enhancements to the HTML<select> tag.\n\nCan be placed anywhere in the template."
+    },
+    "Set": {
+      "prefix": "set",
+      "body": "<isset name=\"$1\" value=\"${$2}\" scope=\"session|request|page\"/>$0",
+      "description": "Setting user-defined variables.\n\nCan be placed anywhere in the template."
+    },
+    "Slot": {
+      "prefix": "slot",
+      "body": "<isslot id=\"$1id\" context=\"global|category\" context-object=\"${context_object}\" description=\"description\" preview-url=\"${url}\"/>$0",
+      "description": "Define slots for content display.\n\nLocation: Usually within <isdecorate> tags."
+    },
+    "Status": {
+      "prefix": "status",
+      "body": "<isstatus value=\"${$1http_code}\"/>$0",
+      "description": "Define status codes.\n\nCan be placed anywhere in the template."
+    }
+  },
+  ".text.html.isml .meta.tag, .text.html.isml .embedded": {
+    "Active Data Context": {
+      "prefix": "activedatacontext"
+    },
+    "Active Data Head": {
+      "prefix": "activedatahead"
+    },
+    "Analytics Off": {
+      "prefix": "analyticsoff"
+    },
+    "Break": {
+      "prefix": "break"
+    },
+    "Cache": {
+      "prefix": "cache"
+    },
+    "Comment": {
+      "prefix": "comment"
+    },
+    "Component": {
+      "prefix": "component"
+    },
+    "Content": {
+      "prefix": "content"
+    },
+    "Continue": {
+      "prefix": "continue"
+    },
+    "Decorate": {
+      "prefix": "decorate"
+    },
+    "Include": {
+      "prefix": "include"
+    },
+    "Loop": {
+      "prefix": "loop"
+    },
+    "Module": {
+      "prefix": "module"
+    },
+    "Next": {
+      "prefix": "next"
+    },
+    "Object ISML": {
+      "prefix": "object-isml"
+    },
+    "Print": {
+      "prefix": "print"
+    },
+    "Redirect": {
+      "prefix": "redirect"
+    },
+    "Remove": {
+      "prefix": "remove"
+    },
+    "Replace": {
+      "prefix": "replace"
+    },
+    "Script ISML": {
+      "prefix": "script-isml"
+    },
+    "Select ISML": {
+      "prefix": "select-isml"
+    },
+    "Set": {
+      "prefix": "set"
+    },
+    "Slot": {
+      "prefix": "slot"
+    },
+    "Status": {
+      "prefix": "status"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  ".text.html.isml": {
+    "editor": {
+      "commentStart": "<iscomment>",
+      "commentEnd": "</iscomment>"
+    }
+  }
+}

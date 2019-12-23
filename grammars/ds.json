@@ -1,0 +1,72 @@
+{
+  "scopeName": "source.js.ds",
+  "name": "DS (Demandware Script)",
+  "fileTypes": ["ds"],
+  "injections": {
+    "L:source.js.ds": {
+      "patterns": [
+        {
+          "include": "#classes"
+        },
+        {
+          "include": "#importers"
+        }
+      ]
+    }
+  },
+  "patterns": [
+    {
+      "include": "source.js"
+    }
+  ],
+  "repository": {
+    "classes": {
+      "begin": "(:\\s*?)?((?:dw\\.){1}(?:campaign|catalog|content|crypto|customer|io|net|object|oms|order|rpc|system|util|value|web)(?:\\s|\\.)?([A-Z]{1}[a-zA-Z0-9-_]+)?)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.operator.assignment.js"
+        },
+        "2": {
+          "name": "support.namespace.js.ds"
+        },
+        "3": {
+          "name": "support.class.js.ds"
+        }
+      },
+      "end": "(?:|\\s|\\.|,)",
+      "name": "support.class.js.ds"
+    },
+    "importers": {
+      "begin": "(import(Package|Script))",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.control.js.ds"
+        }
+      },
+      "end": "(?<=\\))",
+      "name": "meta.function-call.js",
+      "patterns": [
+        {
+          "begin": "\\(",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.arguments.begin.bracket.round.js"
+            }
+          },
+          "end": "\\)",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.arguments.end.bracket.round.js"
+            }
+          },
+          "name": "meta.arguments.js",
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

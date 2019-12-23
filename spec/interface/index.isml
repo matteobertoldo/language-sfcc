@@ -1,0 +1,78 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+
+<isset
+	name="category"
+	value="${pdict.category}"
+	scope="page"
+/>
+
+<iscomment> TODO: Lorem ipsum dolor sit amet, consectetur adipisicing elit. </iscomment>
+<isif condition="${category != null && category.online}">
+    <isscript>
+        importPackage(dw.util);
+        var elements = null;
+
+    	if (!empty(pdict.Product)) {
+    		var Element = {};
+            var productUrl = URLUtils.https('Product-Show', 'pid', pdict.Product.ID).toString();
+            var _elements : new dw.util.ArrayList();
+
+    		Element.type = "ListItem";
+    		Element.position = pos;
+    		Element.item = {
+    			"@id": productUrl,
+    			"name": pdict.Product.name
+    		};
+
+    		_elements.push(Element);
+    	}
+
+    	elements = JSON.stringify(_elements);
+	</isscript>
+    <script type="application/ld+json">
+		{
+	        "@context": "https://schema.org",
+	        "@type": "Organization",
+	        "url": "${URLUtils.https('Home-Show')}",
+	        "logo": "${URLUtils.staticURL('/images/sprite.svg#logo')}",
+			"elements": <isprint value="${elements}" encoding="off"/>
+	    }
+	</script>
+</isif>
+
+<isdecorate template="sfcc/base">
+    <div class="default-top-gutter show-for-large">
+        <isif condition="${pdict.CurrentCustomer.authenticated}">
+            <isbreadcrumbs
+                bcurl1="${URLUtils.https('Default-Start')}"
+                bctext1="Home"
+                bcurl2="${pdict.bctext3 != null ? URLUtils.https('Account-Show') : null}"
+                bctext2="${Resource.msg('account.header', 'account', null)}"
+            />
+        </isif>
+    </div>
+    <div class="grid-container">
+		<section class="hero-row">
+			<h1 class="h3 title text-center show-for-large">
+	            <isif condition="${!pdict.empty(pdict.title)}">
+	                ${pdict.title}
+	            <iselse>
+	                ${Resource.msg('account.header', 'account', null)}
+	            </isif>
+	        </h1>
+	        <div class="grid-x grid-dashboard">
+	            <div class="small-12 medium-12 large-2 large-offset-1 sidebar-menu">
+	                <iscontentasset aid="account-need-help" />
+	            </div>
+	            <div class="small-12 medium-12 ${pdict.active == 'orders-details' ? 'large-7' : 'large-6'} large-offset-1">
+	                <isif condition="${pdict.bctext3 != null}">
+	                    <isreplace/>
+	                <iselse>
+	                    <isinclude template="account/user/dashboard"/>
+	                </isif>
+	            </div>
+	        </div>
+		</section>
+        <!-- html comment -->
+    </div>
+</isdecorate>
