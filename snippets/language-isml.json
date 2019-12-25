@@ -45,6 +45,11 @@
       "body": "<iscontinue/>$0",
       "description": "Jump to the beginning of the loop.\n\nOnly used inside <isloop>...</isloop>."
     },
+    "Cookie": {
+      "prefix": "cookie",
+      "body": "<iscookie name=\"$1cookie_name\" value=\"cookie_value\" comment=\"cookie_use\" domain=\"domain_name\" path=\"pathname\" maxAge=\"cookie_lifetime\" version=\"cookie_spec\" secure=\"on|off\"/>$0",
+      "description": "Setting cookies in your system.\n\nCan be placed anywhere in the template>."
+    },
     "Decorate": {
       "prefix": "decorate",
       "body": "<isdecorate template=\"$1template_name\">\n</isdecorate>$0",
@@ -58,6 +63,11 @@
     "Else If Condition": {
       "prefix": "elseif",
       "body": "<iselseif condition=\"${$1true}\">\n</iselseif>$0",
+      "description": "Creating conditional template code.\n\nCan be placed anywhere in the template."
+    },
+    "Else If Condition Inline": {
+      "prefix": "elseif-inline",
+      "body": "<iselseif condition=\"${$1true}\">$0",
       "description": "Creating conditional template code.\n\nCan be placed anywhere in the template."
     },
     "If Condition": {
@@ -92,12 +102,12 @@
     },
     "Object ISML": {
       "prefix": "object-isml",
-      "body": "<isobject object=\"${$1name}\" view=\"none|searchhit|recommendation|setproduct|detail\">\n\n</isobject>$0",
+      "body": "<isobject object=\"${$1name}\" view=\"none|searchhit|recommendation|setproduct|detail\">\n</isobject>$0",
       "description": "Collects page impressions or views from the storefront.\n\nMust wrap any object you want to record active data for."
     },
     "Print": {
       "prefix": "print",
-      "body": "<isprint value=\"${$1}\" encoding=\"on|off\" timezone=\"SITE|INSTANCE|utc\" padding=\"padding_constant\"/>$0",
+      "body": "<isprint value=\"${$1output}\" formatter=\"format\" encoding=\"on|off\" timezone=\"SITE|INSTANCE|utc\" padding=\"padding_constant\"/>$0",
       "description": "Formatting and encoding output strings."
     },
     "Redirect": {
@@ -127,7 +137,7 @@
     },
     "Set": {
       "prefix": "set",
-      "body": "<isset name=\"$1\" value=\"${$2}\" scope=\"session|request|page\"/>$0",
+      "body": "<isset name=\"$1var_name\" value=\"${var_value}\" scope=\"session|request|page\"/>$0",
       "description": "Setting user-defined variables.\n\nCan be placed anywhere in the template."
     },
     "Slot": {
@@ -169,8 +179,14 @@
     "Continue": {
       "prefix": "continue"
     },
+    "Cookie": {
+      "prefix": "cookie"
+    },
     "Decorate": {
       "prefix": "decorate"
+    },
+    "Else If Condition Inline": {
+      "prefix": "elseif-inline"
     },
     "Include": {
       "prefix": "include"

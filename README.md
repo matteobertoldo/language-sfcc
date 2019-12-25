@@ -1,8 +1,12 @@
-# Language SFCC
+<p>
+    <img width="260px" src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/master/assets/atom-sfcc.svg?sanitize=true" alt="Atom SFCC" />
+</p>
 
-[![Build Status](https://travis-ci.org/matteobertoldo/language-sfcc.svg?branch=master)](https://travis-ci.org/matteobertoldo/language-sfcc) [![Dependencies Status](https://david-dm.org/matteobertoldo/language-sfcc/dev-status.svg)](https://david-dm.org/matteobertoldo/language-sfcc?type=dev)
+<hr />
 
-Adds syntax highlighting, completions, and snippets to `.isml` &amp; Demandware Script (`.ds`) files in [Atom](https://atom.io).
+[![Build Status](https://travis-ci.org/matteobertoldo/language-sfcc.svg?branch=master)](https://travis-ci.org/matteobertoldo/language-sfcc) [![Dependencies Status](https://david-dm.org/matteobertoldo/language-sfcc/status.svg)](https://david-dm.org/matteobertoldo/language-sfcc)
+
+Adds syntax highlighting, completions, and snippets to `.isml` &amp; `.ds` (Demandware Script) files in [Atom](https://atom.io).
 
 ## Installation
 

@@ -4,5 +4,4 @@
 .github/
 assets/
 node_modules/
-spec/visual/
 npm-debug.log
