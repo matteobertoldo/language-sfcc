@@ -9,7 +9,7 @@
     "useTabs": false,
     "overrides": [
         {
-            "files": ["*.json", ".travis.yml"],
+            "files": ["*.json", "*.yml"],
             "options": {
                 "tabWidth": 2
             }

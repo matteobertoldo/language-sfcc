@@ -1,3 +1,15 @@
+## 0.2.1 - 2020-01-04
+
+### Changed
+
+-   Once called, all snippets are completed with automatic selection to modify the default attributes.
+-   All attributes have been optimized based on whether they can be: `strings` or `expressions`. According to official [documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/ISML/ISML.html).
+-   Improved _README_ documentation.
+
+### Fixed
+
+-   Fixed [#3](https://github.com/matteobertoldo/language-sfcc/issues/3): **&#91;ISML&#93;** check on attributes of each server tags.
+
 ## 0.2.0 - 2019-12-25
 
 ### Added
