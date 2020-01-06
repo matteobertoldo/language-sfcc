@@ -1,6 +1,6 @@
 {
   "name": "language-sfcc",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Adds syntax highlighting, completions, and snippets to ISML & Demandware Script files in Atom.",
   "keywords": [
     "salesforce-commerce-cloud",
