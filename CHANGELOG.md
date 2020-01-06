@@ -1,3 +1,9 @@
+## 0.2.2 - 2020-01-06
+
+### Fixed
+
+-   Fixed [#6](https://github.com/matteobertoldo/language-sfcc/issues/6): **&#91;ISML&#93;** highlight color in the isscript tag.
+
 ## 0.2.1 - 2020-01-04
 
 ### Changed

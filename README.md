@@ -10,7 +10,7 @@
 
 Adds syntax highlighting, completions, and snippets to `.isml` &amp; `.ds` (Demandware Script) files in [Atom](https://atom.io).
 
-## Installation (Soon)
+## Installation
 
 ### Command Line
 
@@ -34,6 +34,17 @@ apm install language-sfcc
 
 The description for autocomplete **ISML** tags are grabbed from the official Salesforce Commerce Cloud B2C [documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/ISML/ISML.html).
 
+### Tags
+
+The autocompletion of the tags respects the _**semantics**_, for the correct functionality of the tags in the _**sfcc**_ environment.
+Look at this example of spacing of the `<isreplace/>` tag. The highlight of the tag color helps you understand if the type is wrong.
+
+<img
+    width="420px"
+    src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/master/assets/hero-type__tag.gif"
+    alt="hero type tags"
+/>
+
 ### Snippets
 
 Once the package is installed, all the snippets available for the various tag servers are available in the section: **Snippets**. <br /> By default, any completion of any tag server can be called without the <kbd>is</kbd> extension.
@@ -53,7 +64,7 @@ By default the ISML syntax includes the default scope for HTML files (`text.html
 The package supports, compared to other extensions for the various editors, **full highlight syntax** between the `html` and `isml` tags. Even in complex situations. Here is an example.
 
 <img
-    style="border-radius: 6px; max-width: 756px; width: 100%;"
+    width="672px"
     src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/master/assets/hero-ld%2Bjson__loop.png"
     alt="hero ld+json"
 />
