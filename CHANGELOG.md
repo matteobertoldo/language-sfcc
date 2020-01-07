@@ -1,3 +1,13 @@
+## 0.3.0 - 2020-01-07
+
+### Changed
+
+-   Changed minor version for `apm` service.
+
+### Removed
+
+-   Removed `assets` folder.
+
 ## 0.2.2 - 2020-01-06
 
 ### Fixed
