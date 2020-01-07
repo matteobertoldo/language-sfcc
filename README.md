@@ -1,6 +1,6 @@
 <img
     width="260px"
-    src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/master/assets/atom-sfcc.svg?sanitize=true"
+    src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/assets/ui/atom-sfcc.svg?sanitize=true"
     alt="Atom SFCC"
 />
 
@@ -41,7 +41,7 @@ Look at this example of spacing of the `<isreplace/>` tag. The highlight of the 
 
 <img
     width="420px"
-    src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/master/assets/hero-type__tag.gif"
+    src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/assets/ui/hero-type__tag.gif"
     alt="hero type tags"
 />
 
@@ -65,7 +65,7 @@ The package supports, compared to other extensions for the various editors, **fu
 
 <img
     width="672px"
-    src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/master/assets/hero-ld%2Bjson__loop.png"
+    src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/assets/ui/hero-ld%2Bjson__loop.png"
     alt="hero ld+json"
 />
 
