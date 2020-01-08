@@ -41,7 +41,7 @@ Look at this example of spacing of the `<isreplace/>` tag. The highlight of the 
 
 <img
     width="420px"
-    src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/assets/ui/hero-type__tag.gif"
+    src="https://user-images.githubusercontent.com/15775323/71999128-2304c680-3241-11ea-9f6e-379f462587aa.gif"
     alt="hero type tags"
 />
 
@@ -65,7 +65,7 @@ The package supports, compared to other extensions for the various editors, **fu
 
 <img
     width="672px"
-    src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/assets/ui/hero-ld%2Bjson__loop.png"
+    src="https://user-images.githubusercontent.com/15775323/71999465-bdfda080-3241-11ea-8a0e-88000eb19dca.png"
     alt="hero ld+json"
 />
 
