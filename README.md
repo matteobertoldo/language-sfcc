@@ -64,8 +64,8 @@ By default the ISML syntax includes the default scope for HTML files (`text.html
 The package supports, compared to other extensions for the various editors, **full highlight syntax** between the `html` and `isml` tags. Even in complex situations. Here is an example.
 
 <img
-    width="672px"
-    src="https://user-images.githubusercontent.com/15775323/71999465-bdfda080-3241-11ea-8a0e-88000eb19dca.png"
+    width="720px"
+    src="https://user-images.githubusercontent.com/15775323/72209745-07ecbd80-34b2-11ea-891c-82d01571c4b8.png"
     alt="hero ld+json"
 />
 
