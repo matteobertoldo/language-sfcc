@@ -306,13 +306,13 @@
     "preview-url": {
       "description": "<url> value identifies the URL used within Business Manager to preview the content slot. It you don't specify a value, a default URL is used."
     },
-    "scope": {
-      "values": ["session", "request", "page"]
-    },
+    "scope": {},
     "isremove/scope": {
+      "values": ["session", "request", "page"],
       "description": "The <pdict> variable has been deprecated. Instead, use <request>.\n\n• <session> specifies that variables are available across multiple requests within a session.\n• <pdict> specifies that variables are available via the Pipeline Dictionary.\n• <request> specifies that variables are available via the current internal Salesforce B2C Commerce request.\n• <page> specifies that variables are available on the current ISML page."
     },
     "isset/scope": {
+      "values": ["session", "request", "page"],
       "description": "• <session> variables are available across multiple requests within a session.\n• <request> variables are available for the current internal Salesforce B2C Commerce request. The <request> variable isn't available for multiple requests, so it isn't available after an interaction continue node.\n• <page> variables are available for the current ISML page."
     },
     "secure": {
