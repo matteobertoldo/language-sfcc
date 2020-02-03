@@ -1,10 +1,11 @@
-<img
-    width="260px"
-    src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/assets/ui/atom-sfcc.svg?sanitize=true"
-    alt="Atom SFCC"
-/>
-
-<hr />
+<h1>
+    Language SFCC
+    <img
+        width="190px"
+        src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/assets/ui/atom-sfcc.svg?sanitize=true"
+        alt="Atom SFCC"
+    />
+</h1>
 
 [![macOS/Linux Build Status](https://travis-ci.org/matteobertoldo/language-sfcc.svg?branch=master)](https://travis-ci.org/matteobertoldo/language-sfcc) [![Windows Build status](https://ci.appveyor.com/api/projects/status/bxsl40wyjcuxaa2g?svg=true)](https://ci.appveyor.com/project/matteobertoldo/language-sfcc) [![Dependencies Status](https://david-dm.org/matteobertoldo/language-sfcc/status.svg)](https://david-dm.org/matteobertoldo/language-sfcc)
 
@@ -36,7 +37,7 @@ The description for autocomplete **ISML** tags are grabbed from the official Sal
 
 ### Tags
 
-The autocompletion of the tags respects the _**semantics**_, for the correct functionality of the tags in the _**sfcc**_ environment.
+The autocompletion of the tags respects the _**semantics**_, for the correct functionality of the tags in the **SFCC** environment.
 Look at this example of spacing of the `<isreplace/>` tag. The highlight of the tag color helps you understand if the type is wrong.
 
 <img

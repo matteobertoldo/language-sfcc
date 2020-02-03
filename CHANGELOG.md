@@ -1,3 +1,20 @@
+## 0.4.0 - 2020-02-03
+
+### Added
+
+-   Added support for Autocomplete&plus; [#10](https://github.com/matteobertoldo/language-sfcc/issues/10).
+-   Added new `descriptions` of each server tag.
+-   Added auto-completion of each `attribute` for each individual tag.
+-   Added `url` to official Salesforce documentation for every single tag.
+
+### Changed
+
+-   Disabled all `conditional` snippets in `meta.tag` scope.
+
+### Removed
+
+-   Removed `description` in all snippets in favor of Autocomplete+.
+
 ## 0.3.0 - 2020-01-07
 
 ### Changed
@@ -12,7 +29,7 @@
 
 ### Fixed
 
--   Fixed [#6](https://github.com/matteobertoldo/language-sfcc/issues/6): **&#91;ISML&#93;** highlight color in the isscript tag.
+-   Fixed [#6](https://github.com/matteobertoldo/language-sfcc/issues/6): &#91;ISML&#93; highlight color in the isscript tag.
 
 ## 0.2.1 - 2020-01-04
 
@@ -24,7 +41,7 @@
 
 ### Fixed
 
--   Fixed [#3](https://github.com/matteobertoldo/language-sfcc/issues/3): **&#91;ISML&#93;** check on attributes of each server tags.
+-   Fixed [#3](https://github.com/matteobertoldo/language-sfcc/issues/3): &#91;ISML&#93; check on attributes of each server tags.
 
 ## 0.2.0 - 2019-12-25
 
