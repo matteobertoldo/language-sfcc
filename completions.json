@@ -226,7 +226,25 @@
       "description": "• <on> turns on encoding for the output stream. This is used in combination with the charset to determine the characters in the output stream.\n• <off> turns off encoding for the output stream.\n• <html> turns on encoding and specifies html as the type of encoding. This is used in combination with the charset to determine the characters in the output stream.\n• <xml> turns on encoding and specifies xml as the type of encoding. This is used in combination with the charset to determine the characters in the output stream.\n• <wml> turns on encoding and specifies xml as the type of encoding. This is used in combination with the charset to determine the characters in the output stream."
     },
     "isprint/encoding": {
-      "type": "switcher",
+      "values": [
+        "on",
+        "off",
+        "htmlcontent",
+        "htmlsinglequote",
+        "htmldoublequote",
+        "htmlunquote",
+        "jshtml",
+        "jsattribute",
+        "jsblock",
+        "jssource",
+        "jsonvalue",
+        "uricomponent",
+        "uristrict",
+        "xmlcontent",
+        "xmlsinglequote",
+        "xmldoublequote",
+        "xmlcomment"
+      ],
       "description": "Default value is <on>. With this attribute, you can explicitly switch automatic encoding on and off. Salesforce B2C Commerce supports encoding in HTML, XML and WML. Even if encoding is turned off, you an use the <StringUtil> API to encode individual strings."
     },
     "isselect/encoding": {

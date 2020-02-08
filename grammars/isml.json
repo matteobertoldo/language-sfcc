@@ -45,20 +45,20 @@
           "name": "punctuation.section.embedded.begin.isml"
         }
       },
-      "contentName": "source.js",
+      "contentName": "source.js.ds",
       "end": "(\\})",
       "endCaptures": {
         "0": {
           "name": "punctuation.section.embedded.end.isml"
         },
         "1": {
-          "name": "source.js"
+          "name": "source.js.ds"
         }
       },
       "name": "meta.embedded.line.expression.isml",
       "patterns": [
         {
-          "include": "source.js"
+          "include": "source.js.ds"
         }
       ]
     },
