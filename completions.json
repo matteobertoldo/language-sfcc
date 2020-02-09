@@ -3,7 +3,7 @@
     "isactivedatacontext": {
       "attributes": ["category"],
       "description": "Can be placed anywhere that script tags are valid.\n\nShould only be in one template used to render a page.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attr"
     },
     "isactivedatahead": {
       "description": "Allows collection of active data from pages with a <head> tag.",
@@ -20,7 +20,7 @@
     "iscache": {
       "attributes": ["status", "type", "hour", "minute", "varyby", "if"],
       "description": "Can be placed anywhere in the template.\nHowever, as a best practice, Commerce Cloud recommends that caching statements are placed at the beginning of a template.\n\nIf the tag occurs several times in one template, the one set to cache off or the one with the shortest cache time is used as the cache setting for the resulting page.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attrs"
     },
     "iscomment": {
       "description": "Can be placed anywhere in the template.\nUsing <iscomment> is preferable to using HTML comments, especially for sensitive information, because the tag is removed automatically by B2C Commerce on rendered pages.",
@@ -29,12 +29,12 @@
     "iscomponent": {
       "attributes": ["pipeline", "locale"],
       "description": "Including the output of a pipeline in the page.\n\nCan be placed anywhere in the template.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attrs"
     },
     "iscontent": {
       "attributes": ["type", "charset", "encoding", "compact"],
       "description": "Define the MIME type of the output document.\nLocation: Before the HTML DOCTYPE declaration.\n\nTo make sure all characters in a document are correctly encoded, the <iscontent/> tag should always be first in an ISML template.\n\nDon't specify <iscontent> if it isn't needed. The default for pipeline responses text/html, UTF-8, and compact=\"false\".\n\nThe default for emails when using the SendMail pipelet is text/plain.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attrs"
     },
     "iscontinue": {
       "description": "Jump to the beginning of the loop.\n\nOnly used inside <isloop>...</isloop>.",
@@ -43,7 +43,7 @@
     "iscookie": {
       "attributes": ["name", "value", "comment", "domain", "path", "maxAge", "version", "secure"],
       "description": "Setting cookies in your system.\n\nCan be placed anywhere in the template>.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attrs"
     },
     "isdecorate": {
       "attributes": ["template"],
@@ -67,7 +67,7 @@
     "isinclude": {
       "attributes": ["template", "url", "sf-toolkit"],
       "description": "Including the contents of one template inside another.\nCan be placed anywhere in the template.\n\nHowever, as a best practice, add includes that affect the whole page to the top of the template.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attrs"
     },
     "isloop": {
       "attributes": ["items", "iterator", "alias", "var", "status", "begin", "end", "step"],
@@ -77,7 +77,7 @@
     "ismodule": {
       "attributes": ["template", "name"],
       "description": "Declaring custom tags.\n\nCan be placed anywhere in the template.\n\nIn SiteGenesis, all <ismodules> are declared in one file: util/modules.isml.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attrs"
     },
     "isnext": {
       "description": "Jumping forward within a loop.\n\nCan be placed anywhere in the template.\n\nOnly used inside <isloop>...</isloop>.",
@@ -91,17 +91,17 @@
     "isprint": {
       "attributes": ["value", "style", "formatter", "timezone", "padding", "encoding"],
       "description": "Formatting and encoding output strings.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attrs"
     },
     "isredirect": {
       "attributes": ["location", "permanent"],
       "description": "Redirecting browsers to specific URLs.\n\nLocation: Before the HTML DOCTYPE declaration.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attrs"
     },
     "isremove": {
       "attributes": ["name", "scope"],
       "description": "Removing user-defined variables.\n\nCan be placed anywhere in the template.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attrs"
     },
     "isreplace": {
       "description": "Part of the decorator mechanism; insert content to be decorated.\n\nMust be within <isdecorate> tags. If a template is going to be remotely included, the <isdecorate> tags can be in the including template.",
@@ -114,22 +114,22 @@
     "isselect": {
       "attributes": ["name", "iterator", "description", "value", "condition", "encoding"],
       "description": "Enhancements to the HTML<select> tag.\n\nCan be placed anywhere in the template.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attrs"
     },
     "isset": {
       "attributes": ["name", "value", "scope"],
       "description": "Setting user-defined variables.\n\nCan be placed anywhere in the template.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attrs"
     },
     "isslot": {
       "attributes": ["id", "context", "context-object", "description", "preview-url"],
       "description": "Define slots for content display.\n\nLocation: Usually within <isdecorate> tags.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attrs"
     },
     "isstatus": {
       "attributes": ["value"],
       "description": "Define status codes.\n\nCan be placed anywhere in the template.",
-      "rightLabel": "Self Closing"
+      "rightLabel": "Self Closing With Attr"
     }
   },
   "attributes": {
@@ -142,7 +142,8 @@
     "category": {
       "description": "Allowed data type: expression.\n\nAn expression that retrieves the current category from the pipeline dictionary is used."
     },
-    "charset": {
+    "charset": {},
+    "iscontent/charset": {
       "values": [
         "utf-8",
         "shift_jis",
@@ -187,9 +188,7 @@
         "dos-874",
         "cp866",
         "cp1256"
-      ]
-    },
-    "iscontent/charset": {
+      ],
       "description": "Allowed data type: string. Expressions are not allowed.\n<description> describes the slot for the business user who needs to configure it."
     },
     "comment": {
@@ -425,7 +424,7 @@
     },
     "view": {
       "values": ["none", "searchhit", "recommendation", "setproduct", "detail"],
-      "description": "• <none> - Collects search information for the storefront toolkit but doesn't count the object as a product hit for active merchandising. For example, you might want to use this for templates where no search hits are found.\n• <searchhit> - Collects one product impression for each time the page is viewed and collection search information for the storefront toolkit search information tool.\n• <recommendation> - Collects one product impression for each time the page is viewed.\n• <setproduct> - Collects one product impression for each time the page is viewed.\n• <detail> - Collects one product view for each time the page is viewed. All <attributes> never passes search information to the Storefront Toolkit Search Information Tool."
+      "description": "• <none> - Collects search information for the storefront toolkit but doesn't count the object as a product hit for active merchandising. For example, you might want to use this for templates where no search hits are found.\n• <searchhit> - Collects one product impression for each time the page is viewed and collection search information for the storefront toolkit search information tool.\n• <recommendation> - Collects one product impression for each time the page is viewed.\n• <setproduct> - Collects one product impression for each time the page is viewed.\n• <detail> - Collects one product view for each time the page is viewed. All <attributes> exept for <none || searchhit> never passes search information to the Storefront Toolkit Search Information Tool."
     }
   }
 }

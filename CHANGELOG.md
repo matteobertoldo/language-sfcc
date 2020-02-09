@@ -1,15 +1,16 @@
-## 0.4.0 - 2020-02-08
+## 0.4.0 - 2020-02-09
 
 ### Added
 
 -   Added support for Autocomplete&plus; [#10](https://github.com/matteobertoldo/language-sfcc/issues/10).
 -   Added new `descriptions` of each server tag.
 -   Added auto-completion of each `attribute` for each individual tag.
--   Added `url` to official Salesforce documentation for every single tag.
+-   Added specific `url` to official Salesforce documentation for every single tag.
 
 ### Changed
 
--   Disabled all `conditional` snippets in `meta.tag` scope.
+-   Disabled all `conditional` snippets
+    -   (`else`, `elseif`, `if`, `ife`) in `meta.tag` scope.
 
 ### Removed
 
