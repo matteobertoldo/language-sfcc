@@ -82,7 +82,7 @@ The package supports, compared to other extensions for the various editors, **fu
 ### Validate ISML
 
 Each `.isml` file can be parsed with the [`htmlhint`](https://github.com/htmlhint/HTMLHint) plugin, configurable by `.htmlhintrc` file.\
-Follow [this](https://github.com/matteobertoldo/language-sfcc/wiki/Setup-for-parse-ISML-files-with-htmlhint) guide to be able to parse files correctly.
+Follow [this guide](https://github.com/matteobertoldo/language-sfcc/wiki/Setup-for-parse-ISML-files-with-htmlhint) to be able to parse files correctly.
 
 ## License
 
