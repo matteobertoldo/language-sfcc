@@ -33,14 +33,14 @@ apm install language-sfcc
 
 ## Autocomplete
 
-The description for autocomplete `.isml` tags are grabbed from the official Salesforce Commerce Cloud B2C [documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/ISML/ISML.html).
+The description for autocomplete `.isml` tags are grabbed from the official Salesforce Commerce Cloud B2C [_documentation_](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/ISML/ISML.html). In order to properly consult the official guide, you must be a _**Salesforce Developer registered**_ in an instance of your sandbox or in a Commerce Cloud B2C development environment.
 
 ### Tags
 
 The autocompletion of the tags respects the _**semantics**_, for the correct functionality of the tags in the **SFCC** environment.
 Look at this example of spacing of the `<isreplace/>` tag. The highlight of the tag color helps you understand if the type is wrong.
 
-![isreplace-snippet]()
+![isreplace-snippet](https://user-images.githubusercontent.com/15775323/74118089-431a0380-4bba-11ea-9f6a-7df6b7e72129.gif)
 
 ### Snippets
 
@@ -58,11 +58,11 @@ By default, any completion of any tag server can be called without the <kbd>is</
 Support for **_autocomplete+_** is already included in the package.\
 At each insertion of the opening of each tag, typing therefore: <kbd>&lt;</kbd>, all available server-side tags are shown.
 
-For each tag, in turn, all it's available attributes are self-completed. Before you can close each tag the package helps you understand which type of closure to respect for each tag, thus avoiding syntax errors.\
+For each tag, in turn, all it's available attributes are self-completed. Before you can close each tag the package helps you understand which type of closure to respect for each tag, thus avoiding syntax errors.
 
-![isml-completions]()
+![isml-completions](https://user-images.githubusercontent.com/15775323/74117784-1c0f0200-4bb9-11ea-8fac-786e5d5acaf5.gif)
 
-In addition to suggesting if the tag has attributes or not to insert. The typologies of suggestion, already explanatory for their name while writing the tag, can be:
+In addition to suggesting if the tag has attributes or not to insert, the typologies of suggestion, already explanatory for their name while writing the tag, can be:
 
 -   `Block Closing With Attr(s)`
 -   `Block Closing Without Attrs`
@@ -77,7 +77,7 @@ By default the ISML syntax includes the default scope for HTML files (`text.html
 
 The package supports, compared to other extensions for the various editors, **full highlight syntax** between the `html` and `isml` tags. Even in complex situations. Here is an example.
 
-![syntax-preview]()
+![syntax-preview](https://user-images.githubusercontent.com/15775323/74107063-9a918280-4b6c-11ea-8f1b-df9479cd6910.png)
 
 ### Validate ISML
 
