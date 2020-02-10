@@ -1,7 +1,8 @@
 {
   "name": "language-sfcc",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Adds syntax highlighting, completions, and snippets to ISML & Demandware Script files in Atom.",
+  "main": "./lib/index",
   "keywords": [
     "salesforce-commerce-cloud",
     "sfcc",
@@ -24,11 +25,18 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "getProvider"
+      }
+    }
+  },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^4.2.1",

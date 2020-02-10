@@ -1,14 +1,15 @@
-<img
-    width="260px"
-    src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/assets/ui/atom-sfcc.svg?sanitize=true"
-    alt="Atom SFCC"
-/>
+# Language SFCC
 
-<hr />
+<img
+    alt="Atom SFCC"
+    width="190px"
+    src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/assets/ui/atom-sfcc.svg?sanitize=true"
+/>
 
 [![macOS/Linux Build Status](https://travis-ci.org/matteobertoldo/language-sfcc.svg?branch=master)](https://travis-ci.org/matteobertoldo/language-sfcc) [![Windows Build status](https://ci.appveyor.com/api/projects/status/bxsl40wyjcuxaa2g?svg=true)](https://ci.appveyor.com/project/matteobertoldo/language-sfcc) [![Dependencies Status](https://david-dm.org/matteobertoldo/language-sfcc/status.svg)](https://david-dm.org/matteobertoldo/language-sfcc)
 
-Adds syntax highlighting, completions, and snippets to `.isml` &amp; `.ds` (Demandware Script) files in [Atom](https://atom.io).
+Adds syntax highlighting, completions, and snippets to `.isml` &amp; `.ds` (Demandware Script) files in [Atom](https://atom.io).\
+With support for [_Autocomplete+_](https://github.com/atom/autocomplete-plus) already included.
 
 ## Installation
 
@@ -32,28 +33,41 @@ apm install language-sfcc
 
 ## Autocomplete
 
-The description for autocomplete **ISML** tags are grabbed from the official Salesforce Commerce Cloud B2C [documentation](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/ISML/ISML.html).
+The description for autocomplete `.isml` tags are grabbed from the official Salesforce Commerce Cloud B2C [_documentation_](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/ISML/ISML.html). In order to properly consult the official guide, you must be a _**Salesforce Developer registered**_ in an instance of your sandbox or in a Commerce Cloud B2C development environment.
 
 ### Tags
 
-The autocompletion of the tags respects the _**semantics**_, for the correct functionality of the tags in the _**sfcc**_ environment.
+The autocompletion of the tags respects the _**semantics**_, for the correct functionality of the tags in the **SFCC** environment.
 Look at this example of spacing of the `<isreplace/>` tag. The highlight of the tag color helps you understand if the type is wrong.
 
-<img
-    width="420px"
-    src="https://user-images.githubusercontent.com/15775323/71999128-2304c680-3241-11ea-9f6e-379f462587aa.gif"
-    alt="hero type tags"
-/>
+![isreplace-snippet](https://user-images.githubusercontent.com/15775323/74118089-431a0380-4bba-11ea-9f6a-7df6b7e72129.gif)
 
 ### Snippets
 
-Once the package is installed, all the snippets available for the various tag servers are available in the section: **Snippets**. <br /> By default, any completion of any tag server can be called without the <kbd>is</kbd> extension.
+Once the package is installed, all the snippets available for the various tag servers are available in the section: **Snippets**.\
+By default, any completion of any tag server can be called without the <kbd>is</kbd> extension.
 
 > _Example_: if you type `include` become:
 
 ```html
 <isinclude template="common/layout/page" />
 ```
+
+### Autocomplete+
+
+Support for **_autocomplete+_** is already included in the package.\
+At each insertion of the opening of each tag, typing therefore: <kbd>&lt;</kbd>, all available server-side tags are shown.
+
+For each tag, in turn, all it's available attributes are self-completed. Before you can close each tag the package helps you understand which type of closure to respect for each tag, thus avoiding syntax errors.
+
+![isml-completions](https://user-images.githubusercontent.com/15775323/74117784-1c0f0200-4bb9-11ea-8fac-786e5d5acaf5.gif)
+
+In addition to suggesting if the tag has attributes or not to insert, the typologies of suggestion, already explanatory for their name while writing the tag, can be:
+
+-   `Block Closing With Attr(s)`
+-   `Block Closing Without Attrs`
+-   `Self Closing With Attr(s)`
+-   `Self Closing Without Attrs`
 
 ## Grammar
 
@@ -63,11 +77,12 @@ By default the ISML syntax includes the default scope for HTML files (`text.html
 
 The package supports, compared to other extensions for the various editors, **full highlight syntax** between the `html` and `isml` tags. Even in complex situations. Here is an example.
 
-<img
-    width="720px"
-    src="https://user-images.githubusercontent.com/15775323/72209745-07ecbd80-34b2-11ea-891c-82d01571c4b8.png"
-    alt="hero ld+json"
-/>
+![syntax-preview](https://user-images.githubusercontent.com/15775323/74107063-9a918280-4b6c-11ea-8f1b-df9479cd6910.png)
+
+### Validate ISML
+
+Each `.isml` file can be parsed with the [`htmlhint`](https://github.com/htmlhint/HTMLHint) plugin, configurable by `.htmlhintrc` file.\
+Follow [this guide](https://github.com/matteobertoldo/language-sfcc/wiki/Setup-for-parse-ISML-files-with-htmlhint) to be able to parse files correctly.
 
 ## License
 

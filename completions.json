@@ -1,0 +1,430 @@
+{
+  "tags": {
+    "isactivedatacontext": {
+      "attributes": ["category"],
+      "description": "Can be placed anywhere that script tags are valid.\n\nShould only be in one template used to render a page.",
+      "rightLabel": "Self Closing With Attr"
+    },
+    "isactivedatahead": {
+      "description": "Allows collection of active data from pages with a <head> tag.",
+      "rightLabel": "Self Closing Without Attrs"
+    },
+    "isanalyticsoff": {
+      "description": "Disables analytics for single pages.\n\nCan be placed anywhere that script tags are valid.",
+      "rightLabel": "Self Closing Without Attrs"
+    },
+    "isbreak": {
+      "description": "Only used inside <isloop>...</isloop>.",
+      "rightLabel": "Self Closing Without Attrs"
+    },
+    "iscache": {
+      "attributes": ["status", "type", "hour", "minute", "varyby", "if"],
+      "description": "Can be placed anywhere in the template.\nHowever, as a best practice, Commerce Cloud recommends that caching statements are placed at the beginning of a template.\n\nIf the tag occurs several times in one template, the one set to cache off or the one with the shortest cache time is used as the cache setting for the resulting page.",
+      "rightLabel": "Self Closing With Attrs"
+    },
+    "iscomment": {
+      "description": "Can be placed anywhere in the template.\nUsing <iscomment> is preferable to using HTML comments, especially for sensitive information, because the tag is removed automatically by B2C Commerce on rendered pages.",
+      "rightLabel": "Block Closing Without Attrs"
+    },
+    "iscomponent": {
+      "attributes": ["pipeline", "locale"],
+      "description": "Including the output of a pipeline in the page.\n\nCan be placed anywhere in the template.",
+      "rightLabel": "Self Closing With Attrs"
+    },
+    "iscontent": {
+      "attributes": ["type", "charset", "encoding", "compact"],
+      "description": "Define the MIME type of the output document.\nLocation: Before the HTML DOCTYPE declaration.\n\nTo make sure all characters in a document are correctly encoded, the <iscontent/> tag should always be first in an ISML template.\n\nDon't specify <iscontent> if it isn't needed. The default for pipeline responses text/html, UTF-8, and compact=\"false\".\n\nThe default for emails when using the SendMail pipelet is text/plain.",
+      "rightLabel": "Self Closing With Attrs"
+    },
+    "iscontinue": {
+      "description": "Jump to the beginning of the loop.\n\nOnly used inside <isloop>...</isloop>.",
+      "rightLabel": "Self Closing Without Attrs"
+    },
+    "iscookie": {
+      "attributes": ["name", "value", "comment", "domain", "path", "maxAge", "version", "secure"],
+      "description": "Setting cookies in your system.\n\nCan be placed anywhere in the template>.",
+      "rightLabel": "Self Closing With Attrs"
+    },
+    "isdecorate": {
+      "attributes": ["template"],
+      "description": "Template decoration mechanism.\nMust wrap all content to be decorated.\n\nFor <isdecorate> to render a page, the content it wraps must contain an <isreplace/> tag.",
+      "rightLabel": "Block Closing With Attr"
+    },
+    "iselse": {
+      "description": "Specifying what happens if a condition doesn't evaluate to true.\n\nCan be placed anywhere in the template.",
+      "rightLabel": "Self Closing Without Attrs"
+    },
+    "iselseif": {
+      "attributes": ["condition"],
+      "description": "Creating conditional template code.\n\nCan be placed anywhere in the template.",
+      "rightLabel": "Self Closing With Attr"
+    },
+    "isif": {
+      "attributes": ["condition"],
+      "description": "Creating conditional template code.\n\nCan be placed anywhere in the template.",
+      "rightLabel": "Block Closing With Attr"
+    },
+    "isinclude": {
+      "attributes": ["template", "url", "sf-toolkit"],
+      "description": "Including the contents of one template inside another.\nCan be placed anywhere in the template.\n\nHowever, as a best practice, add includes that affect the whole page to the top of the template.",
+      "rightLabel": "Self Closing With Attrs"
+    },
+    "isloop": {
+      "attributes": ["items", "iterator", "alias", "var", "status", "begin", "end", "step"],
+      "description": "Creating loops.\n\nCan be placed anywhere in the template.",
+      "rightLabel": "Block Closing With Attrs"
+    },
+    "ismodule": {
+      "attributes": ["template", "name"],
+      "description": "Declaring custom tags.\n\nCan be placed anywhere in the template.\n\nIn SiteGenesis, all <ismodules> are declared in one file: util/modules.isml.",
+      "rightLabel": "Self Closing With Attrs"
+    },
+    "isnext": {
+      "description": "Jumping forward within a loop.\n\nCan be placed anywhere in the template.\n\nOnly used inside <isloop>...</isloop>.",
+      "rightLabel": "Self Closing Without Attrs"
+    },
+    "isobject": {
+      "attributes": ["object", "view"],
+      "description": "Collects page impressions or views from the storefront.\n\nMust wrap any object you want to record active data for.",
+      "rightLabel": "Block Closing With Attrs"
+    },
+    "isprint": {
+      "attributes": ["value", "style", "formatter", "timezone", "padding", "encoding"],
+      "description": "Formatting and encoding output strings.",
+      "rightLabel": "Self Closing With Attrs"
+    },
+    "isredirect": {
+      "attributes": ["location", "permanent"],
+      "description": "Redirecting browsers to specific URLs.\n\nLocation: Before the HTML DOCTYPE declaration.",
+      "rightLabel": "Self Closing With Attrs"
+    },
+    "isremove": {
+      "attributes": ["name", "scope"],
+      "description": "Removing user-defined variables.\n\nCan be placed anywhere in the template.",
+      "rightLabel": "Self Closing With Attrs"
+    },
+    "isreplace": {
+      "description": "Part of the decorator mechanism; insert content to be decorated.\n\nMust be within <isdecorate> tags. If a template is going to be remotely included, the <isdecorate> tags can be in the including template.",
+      "rightLabel": "Self Closing Without Attrs"
+    },
+    "isscript": {
+      "description": "Creating scripts within templates.\n\nCan be placed anywhere that script tags are valid.",
+      "rightLabel": "Block Closing Without Attrs"
+    },
+    "isselect": {
+      "attributes": ["name", "iterator", "description", "value", "condition", "encoding"],
+      "description": "Enhancements to the HTML<select> tag.\n\nCan be placed anywhere in the template.",
+      "rightLabel": "Self Closing With Attrs"
+    },
+    "isset": {
+      "attributes": ["name", "value", "scope"],
+      "description": "Setting user-defined variables.\n\nCan be placed anywhere in the template.",
+      "rightLabel": "Self Closing With Attrs"
+    },
+    "isslot": {
+      "attributes": ["id", "context", "context-object", "description", "preview-url"],
+      "description": "Define slots for content display.\n\nLocation: Usually within <isdecorate> tags.",
+      "rightLabel": "Self Closing With Attrs"
+    },
+    "isstatus": {
+      "attributes": ["value"],
+      "description": "Define status codes.\n\nCan be placed anywhere in the template.",
+      "rightLabel": "Self Closing With Attr"
+    }
+  },
+  "attributes": {
+    "alias": {
+      "description": "Name of the variable referencing the object in the iterable collection referenced in the current iteration.\n\nYou must include one of the following but not both:\n• alias=name || var=name\n<name> is the name of a variable referencing the object in the iterable collection referenced in the current iteration.\n\n<var> is preferred."
+    },
+    "begin": {
+      "description": "Allowed data type: expression.\n\n<begin> value is an expression specifying a begin index for the loop. If the begin is greater than 0, the <isloop> skips the first x items and starts looping at the begin index. If begin is smaller than 0, 0 is used as the begin value."
+    },
+    "category": {
+      "description": "Allowed data type: expression.\n\nAn expression that retrieves the current category from the pipeline dictionary is used."
+    },
+    "charset": {},
+    "iscontent/charset": {
+      "values": [
+        "utf-8",
+        "shift_jis",
+        "euc-jp",
+        "big5",
+        "gb2312",
+        "euc-kr",
+        "din_66003-kr",
+        "ns_4551-1-kr",
+        "sen_850200_b",
+        "csISO2022jp",
+        "hz-gb-2312",
+        "ibm852",
+        "ibm866",
+        "irv",
+        "iso-2022-kr",
+        "iso-8859-1",
+        "iso-8859-2",
+        "iso-8859-3",
+        "iso-8859-4",
+        "iso-8859-5",
+        "iso-8859-6",
+        "iso-8859-7",
+        "iso-8859-8",
+        "iso-8859-9",
+        "koi8-r",
+        "ks_c_5601",
+        "windows-1250",
+        "windows-1251",
+        "windows-1252",
+        "windows-1253",
+        "windows-1254",
+        "windows-1255",
+        "windows-1256",
+        "windows-1257",
+        "windows-1258",
+        "windows-874",
+        "x-euc",
+        "asmo-708",
+        "dos-720",
+        "dos-862",
+        "dos-874",
+        "cp866",
+        "cp1256"
+      ],
+      "description": "Allowed data type: string. Expressions are not allowed.\n<description> describes the slot for the business user who needs to configure it."
+    },
+    "comment": {
+      "description": "Allowed data type: string or expression.\n\nBecause cookies can contain private information about a user, the <comment> attribute lets you document the intended use of the cookie. The user can inspect the information to decide whether to accept to accept or not to accept the cookie."
+    },
+    "compact": {
+      "type": "boolean",
+      "description": "Allowed data type: boolean. Expressions are not allowed.\n\nHTML code often contains white space that doesn't have any affect on the visual appearance of a page and is primarily used to make the code of a template easier to read. When compact is set to true, unnecessary white space is removed from the output stream. Compact is <on> by default. See the general examples for an example of how the compact attribute works."
+    },
+    "condition": {},
+    "isselect/condition": {
+      "description": "Allowed data type: expression. String is not allowed.\n\nIf condition is <true>, the appropriate list element is preselected. This has its counterpart in the selected attribute of the <option> HTML tag. Make sure that only one list element matches the condition to avoid undefined results in the browser."
+    },
+    "context": {
+      "values": ["global", "category", "folder"],
+      "description": "Scope of the slot:\n\n• <global> sets the scope to every page on the site.\n• <category> corresponds to a specific category landing page.\n• <folder> corresponds to a specific content folder."
+    },
+    "context-object": {
+      "description": "Allowed data type: Expressions only.\n\n<context-object> an expression that evaluates to a category or folder object."
+    },
+    "description": {},
+    "isselect/description": {
+      "description": "<description> value is text that is shown in the drop-down list box."
+    },
+    "isslot/description": {
+      "description": "Allowed data type: string. Expressions are not allowed.\n<description> describes the slot for the business user who needs to configure it."
+    },
+    "domain": {
+      "description": "Allowed data type: string or expression.\n\n<domain> value specifies the domain for which the cookie is valid. An explicitly specified domain must always start with a dot. If not specified, the browser sets the attribute domain to the domain that issues the cookie."
+    },
+    "encoding": {},
+    "iscontent/encoding": {
+      "values": ["on", "off", "html", "xml", "wml"],
+      "description": "• <on> turns on encoding for the output stream. This is used in combination with the charset to determine the characters in the output stream.\n• <off> turns off encoding for the output stream.\n• <html> turns on encoding and specifies html as the type of encoding. This is used in combination with the charset to determine the characters in the output stream.\n• <xml> turns on encoding and specifies xml as the type of encoding. This is used in combination with the charset to determine the characters in the output stream.\n• <wml> turns on encoding and specifies xml as the type of encoding. This is used in combination with the charset to determine the characters in the output stream."
+    },
+    "isprint/encoding": {
+      "values": [
+        "on",
+        "off",
+        "htmlcontent",
+        "htmlsinglequote",
+        "htmldoublequote",
+        "htmlunquote",
+        "jshtml",
+        "jsattribute",
+        "jsblock",
+        "jssource",
+        "jsonvalue",
+        "uricomponent",
+        "uristrict",
+        "xmlcontent",
+        "xmlsinglequote",
+        "xmldoublequote",
+        "xmlcomment"
+      ],
+      "description": "Default value is <on>. With this attribute, you can explicitly switch automatic encoding on and off. Salesforce B2C Commerce supports encoding in HTML, XML and WML. Even if encoding is turned off, you an use the <StringUtil> API to encode individual strings."
+    },
+    "isselect/encoding": {
+      "type": "switcher",
+      "description": "Allowed data type: expression. String is not allowed.\n\nDefault value is <on>. With this attribute you can explicitly switch automatic HTML encoding of the output on and off. Encoding means converting any special characters, such as `< >`, &, \", as well as the named characters of the HTML 3.2 (Unicode 160-255) into their HTML counterparts. For example, the character \">\" is converted to the string \"&gt;\"."
+    },
+    "end": {
+      "description": "Allowed data type: expression.\n\n<end> value is an expression specifying an end index (inclusive). If end is smaller than begin, the <isloop> is skipped."
+    },
+    "formatter": {
+      "description": "Allowed data type: string or expression.\n\n<formatter> defines a formatting string to control how <isprint> outputs expression results. For information on building your own formatter string, refer to Formatting Expression Results (which follows). If formatter is used, <style> must be omitted."
+    },
+    "hour": {
+      "description": "Allowed data types: integer (0 to unlimited) or an expression.\n\n If the type attribute is set to <daily>, the <hour> attribute value must be an integer ranging from 0 to 23 when used with the minute attribute, and 0–24 if used alone. If type is set to relative, all integer values greater than 0 are valid (the default value is 0, meaning either the page is never cleared from the cache or only the minute attribute is relevant)."
+    },
+    "id": {},
+    "isslot/id": {
+      "description": "Allowed data type: string. Expressions are not allowed.\n\n<id> identifies the slot in a slot configuration."
+    },
+    "if": {
+      "description": "This must be a boolean expression. Anything else returns an error."
+    },
+    "items": {
+      "description": "Allowed data type: expression.\nYou must include one of the following but not both:\n\n• <items>=object <object> is an expression that returns an object to iterate over. Attributes iterator and items can be used interchangeably.\n• <iterator>=iterable <iterable> is an expression that returns an object to iterate over. Attributes iterator and items can be used interchangeably.\n<items> is preferred."
+    },
+    "iterator": {},
+    "isloop/iterator": {
+      "description": "Allowed data type: expression.\nYou must include one of the following but not both:\n\n• <items>=object <object> is an expression that returns an object to iterate over. Attributes iterator and items can be used interchangeably.\n• <iterator>=iterable <iterable> is an expression that returns an object to iterate over. Attributes iterator and items can be used interchangeably.\n<items> is preferred."
+    },
+    "isselect/iterator": {
+      "description": "<iterator> value specifies a loop variable. All elements of the loop variable are added to the list box."
+    },
+    "locale": {
+      "description": "Allowed data type: string or expression.\n\nSpecifies an optional locale for the pipeline call."
+    },
+    "location": {
+      "description": "Allowed data type: string or expression.\n\n<location> value specifies a target URL used by the browser to send a new request."
+    },
+    "maxAge": {
+      "description": "Allowed data type: integer or expression.\n\n<maxAge> value defines the lifetime of the cookie in seconds. The value is a non-negative decimal integer. After the specified time elapses, the buyer's browser can discard the cookie. If the value is 0, the cookie will be deleted. If the value is less than 0, the cookie isn't persistent and is deleted when the browser exits. The lifetime of the cookie set by Salesforce B2C Commerce when an anonymous customer enters the site for the first time adheres to certain international data storage regulations. The maximum age of this cookie is 6 months. The lifetime of any cookie set by B2C Commerce is 6 months or less."
+    },
+    "minute": {
+      "description": "Allowed data types: integer (0 to unlimited) or an expression.\n\nIf the type attribute is set to <daily>, the <minute> attribute value must be an integer ranging from 0 to 59. If type is set to relative, all integer values greater than 0 are valid (the default value is 0, meaning either the page is never cleared from the cache or only the hour attribute is relevant)."
+    },
+    "name": {},
+    "iscookie/name": {
+      "description": "Allowed data type: string or expression.\n\n<name> value is a string or expression that specifies a name for the cookie. Names starting with \"$\" are not allowed."
+    },
+    "ismodule/name": {
+      "description": "Allowed data type: string. Expression isn't allowed.\n\n<name> value is the name of the custom tag. Custom tags are always declared without the <is> prefix, for example, <mytag>. However, when using the custom tag in a template, you must include the <is> prefix like this: <ismytag>. Custom tags can use either case."
+    },
+    "isremove/name": {
+      "description": "<name> value is the name of the variable to be removed."
+    },
+    "isselect/name": {
+      "description": "Allowed data type: string or expression.\n\n<name> value is a name for your list box. Note that the name you specify here is used when the browser sends the user selection as a key-value pair to the server. Therefore, the specified name must be equal to the input parameter required by the pipeline that processes the form values."
+    },
+    "isset/name": {
+      "description": "Allowed data type: expression or string.\n\n<name> value specifies the name of a user-defined variable. The rules for naming user-defined variables are:\n\n• The identifier must start with a letter (a-z, A-Z).\n• Any following character can be a letter, number, or underscore.\n• User-defined variables are case-sensitive."
+    },
+    "object": {
+      "description": "You must specify a <dw.catalog.Product> object as part of an expression for the tag.\n\n<isobject object=\"${pdict.Product}\">\n\nYou can also specify objects in a loop. In the following example, the item is in a loop as it processes products in a search result.\n\n<isobject object=\"${LoopProductHit}\" view=\"searchhit\">"
+    },
+    "padding": {
+      "description": "Allowed data type: string or expression.\n\nThe <padding> value is used only with mail templates, which are templates using <plain> rather than <html> type, to define field width and other spacing issues. The value for padding can be any positive or negative number. The absolute value of <padding> defines the field width. A positive value produces left-aligned output; a negative value produces right-aligned output. If the output string is greater than the field size, the output string is truncated at its right end."
+    },
+    "path": {
+      "description": "Allowed data type: string or expression.\n\n<path> value specifies the subset of URLs to which this cookie applies. Pages outside of that path can't use the cookie."
+    },
+    "permanent": {
+      "type": "boolean",
+      "description": "<false> is the default\n\nAllowed data type: string or expression.\n\n• <true> causes the system to generate an HTTP 301 response code.\n• <false> causes system to generate an HTTP 302 response code."
+    },
+    "pipeline": {
+      "description": "Allowed data type: string or expression.\n\nspecifies the name of the pipeline, for example, \"Product-Show\" as a string or as an expression that resolves to the pipeline name."
+    },
+    "preview-url": {
+      "description": "<url> value identifies the URL used within Business Manager to preview the content slot. It you don't specify a value, a default URL is used."
+    },
+    "scope": {},
+    "isremove/scope": {
+      "values": ["session", "request", "page"],
+      "description": "The <pdict> variable has been deprecated. Instead, use <request>.\n\n• <session> specifies that variables are available across multiple requests within a session.\n• <pdict> specifies that variables are available via the Pipeline Dictionary.\n• <request> specifies that variables are available via the current internal Salesforce B2C Commerce request.\n• <page> specifies that variables are available on the current ISML page."
+    },
+    "isset/scope": {
+      "values": ["session", "request", "page"],
+      "description": "• <session> variables are available across multiple requests within a session.\n• <request> variables are available for the current internal Salesforce B2C Commerce request. The <request> variable isn't available for multiple requests, so it isn't available after an interaction continue node.\n• <page> variables are available for the current ISML page."
+    },
+    "secure": {
+      "type": "switcher",
+      "description": "The secure attribute indicates that a cookie must only be used with a secure server, such as SSL. Default value is <off>. Expressions are not allowed."
+    },
+    "sf-toolkit": {
+      "type": "switcher",
+      "description": "Allowed data type: string.\n\n<on> renders the dwMarker tag around includes. This can cause Internet Explorer to enter Quirks mode.\n\n<off> suppresses the dwMarker tag around includes. See the section on suppressing the dwMarker tag."
+    },
+    "status": {},
+    "iscache/status": {
+      "values": ["on"],
+      "description": "Before <iscache status=\"off\"/> was deprecated, it was necessary to set <iscache status=\"on\"/> to enable page caching. Now the presence of the <iscache/> tag implicitly enables page caching, and it is no longer necessary to set <iscache status=\"on\"/>."
+    },
+    "isloop/status": {
+      "description": "Is the variable name referencing the loop status object. The loop status is used to query information such as the counter or whether it's the first item.\nIf status is specified, a loop status object is assigned to the given variable name. Below are the properties of the loop status object:\n\n• <count> The number of iterations, starting with 1.\n• <index> The current index into the set of items, while iterating.\n• <first> True, if this is the first item while iterating (count == 1).\n• <last> True, if this is the last item while iterating.\n• <odd> True, if count is an odd value.\n• <even> True, if count is an even value."
+    },
+    "step": {
+      "description:": "Allowed data type: expression.\n\n<step> value is an expression specifying the step used to increase the index. If step is smaller than one, one is used as the step value."
+    },
+    "style": {},
+    "isprint/style": {
+      "description": "Allowed data type: string or expression.\n\n<style> specifies a style identifier. Instead of using the style parameter, you can alternatively define a formatter string with the formatter attribute.",
+      "values": [
+        "MONEY_SHORT",
+        "MONEY_LONG",
+        "EURO_SHORT",
+        "EURO_LONG",
+        "INTEGER",
+        "DECIMAL",
+        "QUANTITY_SHORT",
+        "QUANTITY_LONG",
+        "DATE_SHORT",
+        "DATE_LONG",
+        "DATE_TIME",
+        "0",
+        "#",
+        "*"
+      ]
+    },
+    "template": {},
+    "isdecorate/template": {
+      "description": "Allowed data type: string or expression.\n\n<template> value is the name of the decorator template that is used to decorate the contents."
+    },
+    "isinclude/template": {
+      "description": "You must include either <template> or <url>, but not both.\n\nAllowed data type: string or expression. Specifies the name and location of the included template. Use a fixed value or an expression. This is a local include."
+    },
+    "ismodule/template": {
+      "description": "Allowed data type: string or expression.\n\nDefines a path and a name for the template implementing the tag. Relative paths are expanded from the server's template root directory."
+    },
+    "timezone": {
+      "description": "You can specify a particular time zone used for printing dates. This attribute enables you to specify whether you want to print dates with the instance time zone, the site time zone or without time zone conversion.",
+      "values": ["SITE", "INSTANCE", "utc"]
+    },
+    "type": {},
+    "iscache/type": {
+      "values": ["relative", "daily"],
+      "description": "• <relative> lets you specify a certain period of time, in minutes and hours, after which the page will be deleted from the cache.\n• <daily> lets you specify a specific time when the page is deleted from the cache"
+    },
+    "iscontent/type": {
+      "values": ["text/html", "text/plain"],
+      "description": "Allowed data type: string or expression.\n\n<type> value specifies the MIME type of the generated output stream. If no type is specified, the <type> is set to <text/html>. Generally, storefront pages and email output are set to <text/html>. Use an expression for dynamic content types. You can set the encoding explicitly using the charset attribute, or determine it implicitly from the content type."
+    },
+    "url": {
+      "description": "You must include either <template> or <url>, but not both.\n\nAllowed data type: string or expression. Specifies a URL via a literal string or an expression. This includes the content of this URL, typically a URL from the same server. This is a remote include."
+    },
+    "value": {},
+    "iscookie/value": {
+      "description": "Allowed data type: string or expression.\n\n<value> is a string or expression that specifies the value stored by the cookie, such as a specific user ID."
+    },
+    "isprint/value": {
+      "description": "Allowed data type: expression only. String is not allowed.\n\n<value> is an expression that resolves to the text you want to output."
+    },
+    "isselect/value": {
+      "description": "<value> is text sent back by the browser to the server as the value of a key-value pair. This can be used, for example, to return an internal product ID instead of the product name shown in the drop-down list box. The string specified by value is stored in the pipeline dictionary. The appropriate key is determined by the <isselect> attribute name."
+    },
+    "isset/value": {
+      "description": "<value> specifies a value to be stored in the variable. It can be any value."
+    },
+    "isstatus/value": {
+      "description": "Allowed data type: string or expression.\n\n<value> identifies the HTTP response code. This must be an integer."
+    },
+    "var": {
+      "description": "Name of the variable referencing the object in the iterable collection referenced in the current iteration.\n\nYou must include one of the following but not both:\n• alias=name || var=name\n<name> is the name of a variable referencing the object in the iterable collection referenced in the current iteration.\n\n<var> is preferred."
+    },
+    "varyby": {
+      "description": "<varby> value lets you mark a page as personalized. Salesforce B2C Commerce identifies unique pages based on a combination of price book, promotion, sorting rule and customization, caches the different variants of the page, and then delivers the correct version to the user."
+    },
+    "version": {
+      "description": "Allowed data type: decimal integer or expression.\n\n<version> value is a decimal integer that identifies the version of the specification which the cookie conforms to. A decimal integer contains any of the digits 0 through 9."
+    },
+    "view": {
+      "values": ["none", "searchhit", "recommendation", "setproduct", "detail"],
+      "description": "• <none> - Collects search information for the storefront toolkit but doesn't count the object as a product hit for active merchandising. For example, you might want to use this for templates where no search hits are found.\n• <searchhit> - Collects one product impression for each time the page is viewed and collection search information for the storefront toolkit search information tool.\n• <recommendation> - Collects one product impression for each time the page is viewed.\n• <setproduct> - Collects one product impression for each time the page is viewed.\n• <detail> - Collects one product view for each time the page is viewed. All <attributes> exept for <none || searchhit> never passes search information to the Storefront Toolkit Search Information Tool."
+    }
+  }
+}
