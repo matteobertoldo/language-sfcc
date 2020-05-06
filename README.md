@@ -8,7 +8,7 @@
 
 [![macOS/Linux Build Status](https://travis-ci.org/matteobertoldo/language-sfcc.svg?branch=master)](https://travis-ci.org/matteobertoldo/language-sfcc) [![Windows Build status](https://ci.appveyor.com/api/projects/status/bxsl40wyjcuxaa2g?svg=true)](https://ci.appveyor.com/project/matteobertoldo/language-sfcc) [![Dependencies Status](https://david-dm.org/matteobertoldo/language-sfcc/status.svg)](https://david-dm.org/matteobertoldo/language-sfcc)
 
-Adds syntax highlighting, completions, and snippets to `.isml` &amp; `.ds` (Demandware Script) files in [Atom](https://atom.io).\
+Adds syntax highlighting, completions, and snippets to `.isml` &amp; `.ds` (Demandware Script) files in [Atom](https://atom.io). <br>
 With support for [_Autocomplete+_](https://github.com/atom/autocomplete-plus) already included.
 
 ## Installation
@@ -44,7 +44,7 @@ Look at this example of spacing of the `<isreplace/>` tag. The highlight of the 
 
 ### Snippets
 
-Once the package is installed, all the snippets available for the various tag servers are available in the section: **Snippets**.\
+Once the package is installed, all the snippets available for the various tag servers are available in the section: **Snippets**. <br>
 By default, any completion of any tag server can be called without the <kbd>is</kbd> extension.
 
 > _Example_: if you type `include` become:
@@ -55,7 +55,7 @@ By default, any completion of any tag server can be called without the <kbd>is</
 
 ### Autocomplete+
 
-Support for **_autocomplete+_** is already included in the package.\
+Support for **_autocomplete+_** is already included in the package. <br>
 At each insertion of the opening of each tag, typing therefore: <kbd>&lt;</kbd>, all available server-side tags are shown.
 
 For each tag, in turn, all it's available attributes are self-completed. Before you can close each tag the package helps you understand which type of closure to respect for each tag, thus avoiding syntax errors.
@@ -81,7 +81,7 @@ The package supports, compared to other extensions for the various editors, **fu
 
 ### Validate ISML
 
-Each `.isml` file can be parsed with the [`htmlhint`](https://github.com/htmlhint/HTMLHint) plugin, configurable by `.htmlhintrc` file.\
+Each `.isml` file can be parsed with the [`htmlhint`](https://github.com/htmlhint/HTMLHint) plugin, configurable by `.htmlhintrc` file. <br>
 Follow [this guide](https://github.com/matteobertoldo/language-sfcc/wiki/Setup-for-parse-ISML-files-with-htmlhint) to be able to parse files correctly.
 
 ## License
