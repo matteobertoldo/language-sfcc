@@ -1,3 +1,10 @@
+## 0.5.0 - 2020-06-01
+
+### Added
+
+-   Added support for Hyperclick UI [#12](https://github.com/matteobertoldo/language-sfcc/issues/12).
+-   Added new provider to be able to quickly open the paths included in the `template` attribute in the tags: `<isdecorate/>` `<isinclude/>` `<ismodule/>`
+
 ## 0.4.0 - 2020-02-09
 
 ### Added
