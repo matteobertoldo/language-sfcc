@@ -9,7 +9,7 @@
 [![macOS/Linux Build Status](https://travis-ci.org/matteobertoldo/language-sfcc.svg?branch=master)](https://travis-ci.org/matteobertoldo/language-sfcc) [![Windows Build status](https://ci.appveyor.com/api/projects/status/bxsl40wyjcuxaa2g?svg=true)](https://ci.appveyor.com/project/matteobertoldo/language-sfcc) [![Dependencies Status](https://david-dm.org/matteobertoldo/language-sfcc/status.svg)](https://david-dm.org/matteobertoldo/language-sfcc)
 
 Adds syntax highlighting, completions, and snippets to `.isml` &amp; `.ds` (Demandware Script) files in [Atom](https://atom.io). <br>
-With support for [_Autocomplete+_](https://github.com/atom/autocomplete-plus) already included.
+With support for [_Autocomplete+_](https://github.com/atom/autocomplete-plus) &amp; [Hyperclick](https://github.com/facebookarchive/atom-ide-ui/tree/master/modules/atom-ide-ui/pkg/hyperclick) already included.
 
 ## Installation
 
@@ -69,6 +69,21 @@ In addition to suggesting if the tag has attributes or not to insert, the typolo
 -   `Self Closing With Attr(s)`
 -   `Self Closing Without Attrs`
 
+## Hyperclick
+
+It's possible to open the templates included in the `template` attribute in the tags:
+
+-   `<isdecorate/>`
+-   `<isinclude/>`
+-   `<ismodule/>`
+
+Here is an example of automatically opening the templates with Hyperclick interaction.
+In `macOS` the automatic trigger of the underline can be activated with the combination of the default keys <kbd>cmd + click</kbd>, and in other platforms with: <kbd>control + click</kbd>.
+
+![hero-hyperclick](https://user-images.githubusercontent.com/15775323/83434621-1cb6f700-a43b-11ea-8572-ebe27c51894a.gif)
+
+In order to enable Hyperclick support, the installation of [`atom-ide-ui`](https://atom.io/packages/atom-ide-ui) is required. Once installed `language-sfcc` you will be asked _optionally_ whether or not to activate this feature.
+
 ## Grammar
 
 By default the ISML syntax includes the default scope for HTML files (`text.html.basic`), so many of the packages that work for the `.html` extension also work in the `.isml` files. For example, the extension for [automatic closing](https://atom.io/packages/autoclose-html-plus) of tags.
@@ -81,7 +96,7 @@ The package supports, compared to other extensions for the various editors, **fu
 
 ### Validate ISML
 
-Each `.isml` file can be parsed with the [`htmlhint`](https://github.com/htmlhint/HTMLHint) plugin, configurable by `.htmlhintrc` file. <br>
+Each `.isml` files can be parsed with the [`htmlhint`](https://github.com/htmlhint/HTMLHint) plugin, configurable by `.htmlhintrc` file. <br>
 Follow [this guide](https://github.com/matteobertoldo/language-sfcc/wiki/Setup-for-parse-ISML-files-with-htmlhint) to be able to parse files correctly.
 
 ## License
