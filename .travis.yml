@@ -1,4 +1,5 @@
-language: generic
+language: node_js
+node_js: '14.1.0'
 
 env:
   matrix:
@@ -34,5 +35,5 @@ sudo: false
 
 notifications:
   email:
-    on_success: never
+    on_success: change
     on_failure: change
