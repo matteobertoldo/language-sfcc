@@ -21,7 +21,7 @@
   ],
   "repository": {
     "classes": {
-      "begin": "(:\\s*?)?((?:dw\\.){1}(?:campaign|catalog|content|crypto|customer|io|net|object|oms|order|rpc|system|util|value|web)(?:\\s|\\.)?([A-Z]{1}[a-zA-Z0-9-_]+)?)",
+      "begin": "(:\\s*?)?((?:dw\\.){1}(?:campaign|catalog|content|crypto|customer|io|net|object|oms|order|rpc|svc|system|util|value|web)(?:\\s|\\.)?([A-Z]{1}[a-zA-Z0-9-_]+)?)",
       "beginCaptures": {
         "1": {
           "name": "keyword.operator.assignment.js"

@@ -6,10 +6,10 @@
     src="https://raw.githubusercontent.com/matteobertoldo/language-sfcc/assets/ui/atom-sfcc.svg?sanitize=true"
 />
 
-[![macOS/Linux Build Status](https://travis-ci.org/matteobertoldo/language-sfcc.svg?branch=master)](https://travis-ci.org/matteobertoldo/language-sfcc) [![Windows Build status](https://ci.appveyor.com/api/projects/status/bxsl40wyjcuxaa2g?svg=true)](https://ci.appveyor.com/project/matteobertoldo/language-sfcc) [![Dependencies Status](https://david-dm.org/matteobertoldo/language-sfcc/status.svg)](https://david-dm.org/matteobertoldo/language-sfcc)
+[![Build Status](https://img.shields.io/travis/matteobertoldo/language-sfcc.svg)](https://travis-ci.org/matteobertoldo/language-sfcc) [![Windows Build status](https://ci.appveyor.com/api/projects/status/bxsl40wyjcuxaa2g?svg=true)](https://ci.appveyor.com/project/matteobertoldo/language-sfcc) [![Known Vulnerabilities](https://snyk.io/test/github/matteobertoldo/language-sfcc/badge.svg?targetFile=package.json)](https://snyk.io/test/github/matteobertoldo/language-sfcc?targetFile=package.json)
 
 Adds syntax highlighting, completions, and snippets to `.isml` &amp; `.ds` (Demandware Script) files in [Atom](https://atom.io). <br>
-With support for [_Autocomplete+_](https://github.com/atom/autocomplete-plus) &amp; [Hyperclick](https://github.com/facebookarchive/atom-ide-ui/tree/master/modules/atom-ide-ui/pkg/hyperclick) already included.
+With support for [_Autocomplete+_](https://github.com/atom/autocomplete-plus) &amp; [_Hyperclick_](https://github.com/facebookarchive/atom-ide-ui/tree/master/modules/atom-ide-ui/pkg/hyperclick) already included.
 
 ## Installation
 
@@ -33,7 +33,7 @@ apm install language-sfcc
 
 ## Autocomplete
 
-The description for autocomplete `.isml` tags are grabbed from the official Salesforce Commerce Cloud B2C [_documentation_](https://documentation.b2c.commercecloud.salesforce.com/DOC2/topic/com.demandware.dochelp/ISML/ISML.html). In order to properly consult the official guide, you must be a _**Salesforce Developer registered**_ in an instance of your sandbox or in a Commerce Cloud B2C development environment.
+The description for autocomplete `.isml` tags are grabbed from the official Salesforce Commerce Cloud B2C [_documentation_](https://documentation.b2c.commercecloud.salesforce.com/DOC2/index.jsp). In order to properly consult the official guide, you must be a _**Salesforce Developer registered**_ in an instance of your sandbox or in a Commerce Cloud B2C development environment.
 
 ### Tags
 
