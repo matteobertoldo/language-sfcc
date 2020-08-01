@@ -1,3 +1,13 @@
+## 0.5.1 - 2020-08-01
+
+### Added
+
+-   Added highlighting for `dw.svc` (supported until version `19.10`) base class of Service Definitions.
+
+### Changed
+
+-   Updated small configurations &amp; `dependencies` to latest version.
+
 ## 0.5.0 - 2020-06-01
 
 ### Added
