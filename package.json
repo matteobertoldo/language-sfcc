@@ -1,6 +1,6 @@
 {
   "name": "language-sfcc",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Adds syntax highlighting, completions, and snippets to ISML & Demandware Script files in Atom.",
   "main": "./lib/index",
   "keywords": [
@@ -34,6 +34,13 @@
     "hyperclick": {
       "versions": {
         "0.1.0": "getProvider"
+      }
+    }
+  },
+  "consumedServices": {
+    "datatip": {
+      "versions": {
+        "0.1.0": "consumeDatatipService"
       }
     }
   },
