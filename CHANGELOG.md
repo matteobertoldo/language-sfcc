@@ -1,3 +1,14 @@
+## 0.6.0 - 2020-09-16
+
+### Fixed
+
+-   Fixed [#16](https://github.com/matteobertoldo/language-sfcc/issues/16): Incorrect url in snippets for isml tags
+
+### Changed
+
+-   Updated documentation `url` in autocomplete snippet for all `ISML` tags.
+-   Updated indentation style with 2 spaces.
+
 ## 0.5.1 - 2020-08-01
 
 ### Added
