@@ -5,7 +5,6 @@ env:
   matrix:
     - ATOM_CHANNEL=stable
     - ATOM_CHANNEL=beta
-    - ATOM_CHANNEL=dev
 
 addons:
   apt:
@@ -30,8 +29,6 @@ branches:
 
 git:
   depth: 10
-
-sudo: false
 
 notifications:
   email:

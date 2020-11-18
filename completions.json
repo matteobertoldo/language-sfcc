@@ -75,7 +75,7 @@
       "rightLabel": "Block Closing With Attrs"
     },
     "ismodule": {
-      "attributes": ["template", "name"],
+      "attributes": ["template", "name", "attribute"],
       "description": "Declaring custom tags.\n\nCan be placed anywhere in the template.\n\nIn SiteGenesis, all <ismodules> are declared in one file: util/modules.isml.",
       "rightLabel": "Self Closing With Attrs"
     },
@@ -135,6 +135,9 @@
   "attributes": {
     "alias": {
       "description": "Name of the variable referencing the object in the iterable collection referenced in the current iteration.\n\nYou must include one of the following but not both:\n• alias=name || var=name\n<name> is the name of a variable referencing the object in the iterable collection referenced in the current iteration.\n\n<var> is preferred."
+    },
+    "attribute": {
+      "description": "Allowed data type: string. Expression isn't allowed.\n\nSpecifies attributes you want your custom tag to have. You can have as many attributes as you want. Attributes are not required.\n\nNote: Because all attribute names stored in the Pipeline Dictionary are lowercase, use lowercase names in the definitions."
     },
     "begin": {
       "description": "Allowed data type: expression.\n\n<begin> value is an expression specifying a begin index for the loop. If the begin is greater than 0, the <isloop> skips the first x items and starts looping at the begin index. If begin is smaller than 0, 0 is used as the begin value."
@@ -379,7 +382,7 @@
       "description": "You must include either <template> or <url>, but not both.\n\nAllowed data type: string or expression. Specifies the name and location of the included template. Use a fixed value or an expression. This is a local include."
     },
     "ismodule/template": {
-      "description": "Allowed data type: string or expression.\n\nDefines a path and a name for the template implementing the tag. Relative paths are expanded from the server's template root directory."
+      "description": "Allowed data type: string or expression.\n\nDefines a path and a name for the template implementing the tag. Relative paths are expanded from the server's template root directory.\n\nNote: Template file names and folder names can't contain spaces."
     },
     "timezone": {
       "description": "You can specify a particular time zone used for printing dates. This attribute enables you to specify whether you want to print dates with the instance time zone, the site time zone or without time zone conversion.",

@@ -38,22 +38,22 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^9.1.2",
-    "@commitlint/config-conventional": "^9.1.2",
-    "eslint": "^7.9.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.22.0",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-standard": "^4.1.0",
     "husky": "^3.1.0",
-    "lint-staged": "^10.4.0",
+    "lint-staged": "^10.5.1",
     "prettier": "^2.1.2",
-    "remark-cli": "^8.0.1",
+    "remark-cli": "^9.0.0",
     "remark-lint-no-dead-urls": "^1.1.0",
-    "remark-preset-lint-recommended": "^4.0.1"
+    "remark-preset-lint-recommended": "^5.0.0"
   },
   "dependencies": {
     "atom-package-deps": "^6.0.0",
@@ -66,9 +66,9 @@
     }
   },
   "lint-staged": {
-    "*.md": "npm run lint:markdown",
-    "*.js": "npm run lint:js:fix",
-    "*.{json,yml}": "prettier --write"
+    "*.{js,json,yml}": "prettier --write",
+    "*.md": "remark --silently-ignore",
+    "*.js": "npm run lint:js:fix"
   },
   "package-deps": [
     "atom-ide-ui"
