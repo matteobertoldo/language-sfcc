@@ -1,3 +1,17 @@
+## 0.6.1 - 2020-11-19
+
+### Fixed
+
+Travis CI `sudo` deprecation warning.
+
+### Added
+
+-   Added "attribute" for the `<ismodule />` tag and it's description in the official Salesforce Commerce Cloud B2C documentation.
+
+### Changed
+
+-   Updated most of `devDependencies` to lastest version &amp; fixed new `eslint` warings.
+
 ## 0.6.0 - 2020-09-16
 
 ### Fixed
