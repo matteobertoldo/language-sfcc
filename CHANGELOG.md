@@ -2,11 +2,11 @@
 
 ### Fixed
 
-Travis CI `sudo` deprecation warning.
+-   Travis CI `sudo` deprecation warning.
 
 ### Added
 
--   Added "attribute" for the `<ismodule />` tag and it's description in the official Salesforce Commerce Cloud B2C documentation.
+-   Added "attribute" for the `<ismodule/>` tag and it's description in the official Salesforce Commerce Cloud B2C documentation.
 
 ### Changed
 
