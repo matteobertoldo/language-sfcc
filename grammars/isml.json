@@ -13,6 +13,9 @@
         },
         {
           "include": "#tags"
+        },
+        {
+          "include": "#tag-template-attribute"
         }
       ]
     }
@@ -217,6 +220,63 @@
                   "include": "source.js.ds"
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    "tag-template-attribute": {
+      "begin": "\\b(template)\\s*(=)\\s*",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.other.attribute-name.template.html.isml"
+        },
+        "2": {
+          "name": "punctuation.separator.key-value.html.isml"
+        }
+      },
+      "end": "(?!\\G)|(?=\\s|/?>)",
+      "name": "meta.attribute-with-value.template.html.isml",
+      "patterns": [
+        {
+          "begin": "\"",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.html"
+            }
+          },
+          "end": "\"",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.html"
+            }
+          },
+          "name": "string.quoted.double.html",
+          "patterns": [
+            {
+              "match": "[^\"]+",
+              "name": "markup.underline"
+            }
+          ]
+        },
+        {
+          "begin": "'",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.html"
+            }
+          },
+          "end": "'",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.html"
+            }
+          },
+          "name": "string.quoted.single.html",
+          "patterns": [
+            {
+              "match": "[^']+",
+              "name": "markup.underline"
             }
           ]
         }
