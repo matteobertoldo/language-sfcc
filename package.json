@@ -43,10 +43,10 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "eslint": "^7.21.0",
-    "eslint-config-prettier": "^7.2.0",
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
@@ -63,7 +63,7 @@
     "atom-linter": "^10.0.0",
     "atom-package-deps": "^7.2.2",
     "glob": "^7.1.6",
-    "isml-linter": "^5.30.3"
+    "isml-linter": "^5.35.0"
   },
   "husky": {
     "hooks": {
@@ -74,7 +74,7 @@
   "lint-staged": {
     "*.{js,json,yml}": "prettier --write",
     "*.md": "remark --silently-ignore",
-    "*.js": "npm run lint:js:fix"
+    "*.js": "eslint --fix"
   },
   "package-deps": [
     {
@@ -85,11 +85,9 @@
     }
   ],
   "scripts": {
-    "format": "prettier --config .prettierrc --write \"./**/*.{md,js,json,yml,less}\"",
+    "format": "prettier --config .prettierrc --write .",
     "lint": "npm run lint:js && npm run lint:markdown",
-    "lint:fix": "npm run lint:js:fix",
     "lint:js": "eslint .",
-    "lint:js:fix": "eslint --fix",
     "lint:markdown": "remark .",
     "parse": "npm run format && npm run lint",
     "test": "atom --test spec"
